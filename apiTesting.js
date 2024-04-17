@@ -4,7 +4,7 @@ function getRandomInt() {
 }
 
 const baseURL = 'https://www.googleapis.com/books/v1/volumes?q='
-// Top 100 selling books in UK, 25 items removed as no link was available
+// Top 100 selling books in UK, 25 items get removed later as no infolink was available for these titles
 let bookOptions = ['Da Vinci Code,The',
 'Harry Potter and the Deathly Hallows',
 "Harry Potter and the Philosopher's Stone",
@@ -151,11 +151,3 @@ async function bookFetch(){
 }
 bookFetch()
 
-/*
-if (pages === undefined){
-    console.log(`The book "${title}" has no page count assigned in Google Books, and therefore we cannot tell you how much of it you could have read in your ${screenTime} minutes of screentime.`)
-} else {
-    console.log(`"${title}" is ${pages} pages long. With your screentime of ${screenTime} minutes, you could have read about ${Math.round(readPercentage)} percent of the book!`)
-}
-*/
-// Next task is to let the fetch depend upon given genre, may be unfeasible as not all books have a genre assigned
